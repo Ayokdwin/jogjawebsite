@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hitung trapesium </title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+            #hasil{
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hitung Luas Trapesium</h2>
+        <label>Alas atas (a):</label>
+        <input type="number" id="a" required>
+        <label>Alas bawah (b):</label>
+        <input type="number" id="b" required>
+        <label>Tinggi (t):</label>
+        <input type="number" id="t" required>
+        <button onclick="hitung()">Hitung</button>
+        <div id="hasil"></div>
+    </div>
+    <script>
+        function hitung(){
+            let a =parseFloat(document.getElementById("a").value);
+            let b =parseFloat(document.getElementById("b").value);
+            let t =parseFloat(document.getElementById("t").value);
+            let luas = 0.5 * (a + b) * t;
+            document.getElementById("hasil").innerHTML = "Luas Trapesium: " + luas.toFixed(2) + " cm²";
+        }
+    </script>
+</body>
+</html>
